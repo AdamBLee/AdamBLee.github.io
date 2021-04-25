@@ -83,7 +83,7 @@ hr {
 }
 .container ol, .container ul { padding: 0 8%; }
 .container p:first-of-type {
-    margin-top: 140px;
+    margin-top: 20px;
 }
 
 /* keep embedded videos fluid! */
@@ -180,7 +180,7 @@ nav ul li:hover, nav ul li.active {
 }
 
 .section:first-of-type {
-    padding-top: 140px;
+    padding-top: 110px;
 }
 
 
@@ -358,4 +358,23 @@ nav ul li:hover, nav ul li.active {
     -moz-column-count:    2;
     column-count:         2;
   }
+
+.inner {
+  left: 1%; 
+  top: 45px; 
+  width: 50%; 
+  height: auto; 
+  position: absolute; 
+  z-index: 1;
+}
+
+#inner {
+  left: 1%; 
+  top: 45px; 
+  width: 50%; 
+  height: auto; 
+  position: absolute; 
+  z-index: 1;
+}
+
 }
