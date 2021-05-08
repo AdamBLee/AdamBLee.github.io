@@ -406,6 +406,12 @@ span.lineno {
 	color: blue;
 	font-size: 20px;
   }
+
+.div-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
   /* #submit {
     background-color: #ccc;
     -moz-border-radius: 5px;
