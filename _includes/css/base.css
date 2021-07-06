@@ -446,3 +446,17 @@ span.lineno {
 	position: absolute; 
 	z-index: 1;
   } */
+
+  a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+.widget-cart {
+	float: right;
+	padding-right: 15px;
+}

@@ -1,5 +1,64 @@
 ---
----
+--- 
 {% include css/base.css %}
 {% include css/skeleton.css %}
 {% include css/main.css %}
+
+.signUp {
+    color: lightblue;
+    float: right;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-family: inherit;
+    font-size: 20px;
+}
+
+.navbar .nav>li>a.brand-image {
+    padding: 4px 0px 0px 0px;
+    size: 30%;
+    width: 30%;
+}
+
+.navbar .nav>li>a>img.brand-image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    size: 30%;
+    width: 30%;
+}
+
+.nav>li>a.brand-image {
+    padding: 4px 0px 0px 0px;
+    size: 30%;
+    position: relative;
+    width: 32px;
+    top: 32px;
+}
+
+.nav>li>a>img.brand-image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    position: relative;
+    width: 32px;
+    top: 32px;
+    size: 30%;
+}
+
+.brand-image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    position: relative;
+    width: 15%;
+    top: 32px;
+    size: 50%;
+    border-radius: 10px;
+    /* max-width: 100%; */
+    /* height: auto; */
+}
+
+/* .nav-header { */
+    /* height: 30px; */
+/* } */
