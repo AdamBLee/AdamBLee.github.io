@@ -386,11 +386,40 @@ span.lineno {
 	z-index: 1;
   }
 
+    @media only screen and (max-width: 412px) {
+		.inner-left {
+	/* left: 1%;  */
+	height: auto; 
+	width: 100%;
+	float: left;
+  		}
+	}
+  
+
+  @media only screen and (max-width: 412px) {
+  .inner-right {
+	/* right: 1%;  */
+	/* top: 45px;  */
+	/* width: 50%;  */
+	height: auto; 
+	float: left;
+	clear: right;
+	width: 100%;
+	/* position: absolute;  */
+	/* z-index: 1; */
+  }
+}
+
+.class-name {
+	font-weight: bold;	
+}
+
   .photo-and-text {
 	width: 100%;
 	min-height: 100px;
 	display:inline-block;
 	margin-top: 5px;
+	padding-bottom: 5px;
 
   }
 
@@ -398,21 +427,7 @@ span.lineno {
 	  float: bottom;
   }
 
-  .submit-button {
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 0px;
-	font-family: inherit;
-	color: blue;
-	font-size: 20px;
-	 -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
 
-    text-decoration: none;
-    color: initial;
-
-  }
 
 .div-bottom {
     position: absolute;
@@ -461,9 +476,103 @@ span.lineno {
 
     text-decoration: none;
     color: initial;
+	height: 4em;
+	width: 9em;
+}
+
+.button-submit {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+	height: 3.5em;
+	width: 8em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	/* text-align: center; */
+
+}
+
+.button, button, .button-submit, input[type="submit"], input[type="reset"], input[type="button"] {
+    background: blue;
+    background: blue -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(241, 241, 241, 0.945) 100%);
+    background: blue -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2)));
+    background: blue -webkit-linear-gradient(top, rgb(6, 64, 102) 0%,rgb(5, 134, 255) 100%);
+    background: blue -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
+    background: blue -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
+    background: blue linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%);
+    border: 1px solid #aaa;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    /* color: #444; */
+    color: white !important;
+    /* display: inline-block; */
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(255, 255, 255, .75);
+	text-align: center;
+	height: auto;
+    cursor: pointer;
+    margin-bottom: 15px;
+    line-height: normal;
+    padding: 10px 12px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+hr {
+	margin-top: 25px !important;
+	margin-bottom: 25px !important;
+} 
+
+  .submit-button {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-family: inherit;
+	color: blue;
+	font-size: 20px;
+	 -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+	margin-top: 5px;
+	margin-bottom: 5px;
+    text-decoration: none;
+    color: initial;
+
+  }
+
+a.button-large {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    background-color: initial;
+    /* background-color: blue; */
+	height: 55px;
+	/* width: 55%; */
+
 }
 
 .widget-cart {
 	float: right;
 	padding-right: 15px;
+}
+
+@media only screen and (min-width: 412) {
+	#narrow_screen_display {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 412) {
+	#wide_screen_display {
+		display: none;
+	}
 }
