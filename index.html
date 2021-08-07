@@ -58,6 +58,14 @@
         </div>
         {% endfor %}
 
+    <nav><ul>
+      {% for node in site.posts reversed %}
+        {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
+        <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
+      {% endfor %}
+    </ul>
+          <!-- DO NOT DELETE: Beakid Cart Widget code --> <div class="widget" data-role="beakid-widget" data-widget="grovvup_cart/cart" data-app-id="204"></div> <!-- END OF: Beakid Cart Widget code -->
+</nav>
 
         <div id="footer" class="section text-white">
             <div class="container">
