@@ -2,61 +2,20 @@
 ---
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Escape Velocity Coding / Adam Lee</title>
-    <meta name="keywords" content="coding kids class programming stem fun">
-    <!--only up to 12-->
-    <meta name="description" content="coding kids class programming stem fun">
-    <!--whatever I put in google for my description 280 characters-->
-    <link rel="stylesheet" href="combo.css">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> {% if site.favicon %}
-    <link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %} {% if site.touch_icon %}
-    <link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
-
-    <!-- DO NOT DELETE: Common Beakid.com header code (for all pages with widgets) -->
-    <script src="https://www.beakid.com/sites/all/modules/grovvup_api/js/api.js?v1"></script>
-    <!-- END OF: Common Beakid.com header code -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escape Velocity Coding / Adam Lee</title>
+	<meta name="keywords" content="coding kids class programming stem fun"><!--only up to 12-->
+	<meta name="description" content="coding kids class programming stem fun"><!--whatever I put in google for my description 280 characters-->
+  <link rel="stylesheet" href="combo.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %}
+	{% if site.touch_icon %}<link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
 </head>
-
 <body>
-    <div id="main">
-        <nav>
-            <!-- <li class="header-nav">
-                <img class="brand-image" src="img/logo_long.jpg" />
-                </a>
-            </li> -->
-            <ul>
-                {% for node in site.posts reversed %} {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
-                <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
-                {% endfor %}
-            </ul>
-            <!-- <p "color: white;" class="signUp">hello</p> -->
-        </nav>
-        {% for page in site.posts reversed %} {% capture id %}{{ page.id | remove:'/' | downcase }}{% endcapture %}
-        <div id="{{id}}" class="section p-{{id}}">
-            {% if page.icon %}
-            <div class="subtlecircle sectiondivider imaged">
-                <img src="{{page.icon}}" alt="section icon" />
-                <h5 class="icon-title">{{ page.title }}</h5>
-            </div>
-            {% elsif page.fa-icon %}
-            <div class="subtlecircle sectiondivider faicon">
-                <span class="fa-stack">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-{{ page.fa-icon }} fa-stack-1x"></i>
-        </span>
-                <h5 class="icon-title">{{ page.title }}</h5>
-            </div>
-            {% endif %}
-            <div class="container {{ page.style }}">
-                {{ page.content }}
-            </div>
-        </div>
-        {% endfor %}
+  <div id="main">
 
     <nav><ul>
       {% for node in site.posts reversed %}
@@ -64,19 +23,43 @@
         <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
       {% endfor %}
     </ul>
-          <!-- DO NOT DELETE: Beakid Cart Widget code --> <div class="widget" data-role="beakid-widget" data-widget="grovvup_cart/cart" data-app-id="204"></div> <!-- END OF: Beakid Cart Widget code -->
 </nav>
 
-        <div id="footer" class="section text-white">
-            <div class="container">
-                {% capture foottext %} {% include footer.md %} {% endcapture %} {{ foottext | markdownify }}
-            </div>
-        </div>
-    </div>
 
-    {% include analytics.html %}
+    {% for page in site.posts reversed %}
+      {% capture id %}{{ page.id | remove:'/' | downcase }}{% endcapture %}
+      <div id="{{id}}" class="section p-{{id}}">
+        {% if page.icon %}
+        <div class="subtlecircle sectiondivider imaged">
+          <img src="{{page.icon}}" alt="section icon" />
+          <h5 class="icon-title">{{ page.title }}</h5>
+        </div>
+        {% elsif page.fa-icon %}
+        <div class="subtlecircle sectiondivider faicon">
+          <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-{{ page.fa-icon }} fa-stack-1x"></i>
+          </span>
+          <h5 class="icon-title">{{ page.title }}</h5>
+        </div>
+        {% endif %}
+        <div class="container {{ page.style }}">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endfor %}
+
+
+    <div id="footer" class="section text-white">
+      <div class="container">
+        {% capture foottext %} {% include footer.md %} {% endcapture %}
+        {{ foottext | markdownify }}
+      </div>
+    </div>
+  </div>
+
+{% include analytics.html %}
 </body>
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="site.js"></script> -->
-
 </html>
