@@ -474,19 +474,21 @@ span.lineno {
     -moz-appearance: button;
     appearance: button;
 
-    text-decoration: none;
-    color: initial;
+    /* text-decoration: none; */
+    /* color: initial; */
 	height: 4em;
 	width: 9em;
 }
 
-.button-submit {
+.ev-button-submit {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
 
+	background-color: #1d428a;	
     text-decoration: none;
-    color: initial;
+    /* color: initial; */
+	color: black;
 	height: 3.5em;
 	width: 8em;
 	margin-top: 5px;
