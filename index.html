@@ -25,16 +25,11 @@
 <body>
     <div id="main">
         <nav>
-            <!-- <li class="header-nav">
-                <img class="brand-image" src="img/logo_long.jpg" />
-                </a>
-            </li> -->
             <ul>
                 {% for node in site.posts reversed %} {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
                 <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
                 {% endfor %}
             </ul>
-            <!-- <p "color: white;" class="signUp">hello</p> -->
         </nav>
         {% for page in site.posts reversed %} {% capture id %}{{ page.id | remove:'/' | downcase }}{% endcapture %}
         <div id="{{id}}" class="section p-{{id}}">
