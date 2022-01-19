@@ -54,7 +54,7 @@ pre {
 
 img {
   max-width:100%!important;
-  height:auto;
+  /* height:auto; */
   vertical-align:middle;
 }
 
@@ -403,6 +403,8 @@ nav ul li:hover, nav ul li.active {
 * html .clearfix { /* für IE6 */
   height: 1%;
 }
+
+
 
 
 .row {
