@@ -386,6 +386,32 @@ span.lineno {
 	z-index: 1;
   }
 
+  .course-container {
+	/* display: inline-flex;
+	flex-direction: row;
+	position: relative; */
+  }
+  
+  /* .openItem {
+	height: 200px;
+	width: 200px;
+	border: 1px solid black;
+	position: absolute;
+	right: 0;
+	top: 40px;
+  }
+   */
+  .button-bottom {
+	/* position: relative; */
+	position:relative;
+	bottom: 5%;
+	clear: both;
+  	justify-content: center;
+  	align-items: center;
+	  margin:0 auto;
+    display:block;
+  }
+
     @media only screen and (max-width: 412px) {
 		.inner-left {
 	/* left: 1%;  */
@@ -432,6 +458,31 @@ span.lineno {
 .div-bottom {
     position: absolute;
     bottom: 0;
+}
+
+.clearfix:after{
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix:after {  /* für Firefox, IE8, Opera, Safari, etc. */
+    content: ".";  
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+ 
+* + html .clearfix { /* für IE7 */
+    display: inline-block;
+}
+ 
+* html .clearfix { /* für IE6 */
+    height: 1%;
 }
 
   /* #submit {
